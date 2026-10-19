@@ -1,0 +1,85 @@
+<div class="category-inner" id="categoryNav">
+          <button class="category-link active" type="button" data-category="All">The journal</button>
+          <button class="category-link" type="button" data-category="Appetizer">Appetizer</button>
+          <button class="category-link" type="button" data-category="Main Course">Main course</button>
+          <button class="category-link" type="button" data-category="Dessert">Dessert</button>
+        </div>
+        <span class="nav-note">MGA PABORITO SA HAPAG <span aria-hidden="true">↗</span></span>
+      </nav>
+
+      <section class="page-shell">
+        <div class="section-kicker"><span class="kicker-line"></span> MGA LASANG BAHAY, GAWA SA PUSO <span class="kicker-line"></span></div>
+        <section class="featured" aria-labelledby="featuredTitle">
+          <img class="featured-image" src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=2000&q=85" alt="A comforting Filipino-style chicken dish served for a family meal" />
+          <div class="featured-shade"></div>
+          <div class="featured-copy">
+            <span class="pill light-pill">THIS WEEK’S PABORITO <span aria-hidden="true">✦</span></span>
+            <h1 id="featuredTitle">Pork adobo,<br />made for sharing.</h1>
+            <p>Fork-tender pork simmered low and slow in soy, vinegar, garlic, and peppercorns. Best enjoyed with a mountain of steaming rice.</p>
+            <button class="button button-light" type="button" id="featuredReadMore">Get the recipe <span aria-hidden="true">↗</span></button>
+          </div>
+          <span class="image-caption">Pork adobo · Lutong bahay comfort</span>
+        </section>
+
+        <section class="descriptions" id="recipes" aria-labelledby="descriptionsTitle">
+          <div class="section-heading">
+            <div><p class="eyebrow">MGA PABORITO SA HAPAG</p><h2 id="descriptionsTitle">Food image descriptions<span class="heading-dot">.</span></h2></div>
+            <p class="section-intro">Filipino comfort food, from our kitchen to yours.<br />Sarap ng lutong bahay.</p>
+          </div>
+          <div class="results-note" id="resultsNote" aria-live="polite"></div>
+          <div class="post-list" id="postList"></div>
+          <div class="empty-state" id="emptyState" hidden><span aria-hidden="true">◌</span><h3>No recipes found just yet.</h3><p>Try another ingredient or browse all of our recipes.</p><button class="text-button" id="clearSearch" type="button">Show all recipes <span aria-hidden="true">→</span></button></div>
+        </section>
+      </section>
+
+      <section class="about-band" id="about"><div class="about-inner"><span class="about-spark" aria-hidden="true">✳</span><div><p class="eyebrow">A NOTE FROM OUR TABLE</p><h2>Masarap kapag<br />sama-sama.</h2></div><p>Kain Tayo is a little love letter to Filipino home cooking. We share the recipes that bring everyone to the table—from saucy pork adobo and sour sinigang to a comforting bowl of bulalo. Kain na!</p><a class="text-button" href="#contact">Say hello <span aria-hidden="true">→</span></a></div></section>
+
+      <footer class="footer" id="contact"><a class="brand footer-brand" href="#home"><span class="brand-mark">kt.</span><span>kain tayo</span></a><p>May tanong sa recipe? Say hello at <a href="mailto:hello@kaintayo.kitchen">hello@kaintayo.kitchen</a></p><span class="footer-small">© 2024 KAIN TAYO · FILIPINO FOOD JOURNAL</span></footer>
+    </main>
+
+    <dialog class="recipe-dialog" id="recipeDialog" aria-labelledby="dialogTitle">
+      <button class="dialog-close" id="dialogClose" type="button" aria-label="Close recipe details">×</button>
+      <div id="dialogContent"></div>
+    </dialog>
+    <script src="script.js"></script>
+  </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#e9bd45" />
+    <meta name="description" content="Kain Tayo is a Filipino food journal for beloved lutong bahay recipes, from pork adobo to sinigang and bulalo." />
+    <title>Kain Tayo — Filipino food journal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <button class="icon-button menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-controls="sidebar" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a class="brand" href="#home" aria-label="Kain Tayo home"><span class="brand-mark">kt.</span><span>kain tayo</span></a>
+      <form class="search-form" id="searchForm" role="search">
+        <label class="sr-only" for="searchInput">Search recipes and ingredients</label>
+        <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 5 5"></path></svg>
+        <input id="searchInput" type="search" placeholder="Find a Filipino recipe or ingredient..." autocomplete="off" />
+        <kbd>/</kbd>
+      </form>
+    </header>
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+    <aside class="sidebar" id="sidebar" aria-label="Site menu" aria-hidden="true">
+      <div class="sidebar-top"><a class="brand" href="#home"><span class="brand-mark">kt.</span><span>kain tayo</span></a><button class="icon-button close-sidebar" id="closeSidebar" type="button" aria-label="Close menu">×</button></div>
+      <p class="sidebar-eyebrow">A little more about us</p>
+      <a class="side-link" href="#about"><span aria-hidden="true">✳</span> About the journal</a>
+      <a class="side-link" href="#contact"><span aria-hidden="true">✉</span> Contact</a>
+      <div class="sidebar-note"><span>Made with love,</span><strong>lutong bahay.</strong><span>And always extra rice.</span></div>
+      <p class="sidebar-foot">SARAP NG LUTONG BAHAY · EST. 2024</p>
+    </aside>
+
+    <main id="home">
+      <nav class="category-nav" aria-label="Recipe categories">

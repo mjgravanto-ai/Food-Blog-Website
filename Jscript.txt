@@ -1,0 +1,169 @@
+const recipes = [
+  {
+    id: "pork-adobo",
+    title: "Pork adobo, the family favorite",
+    category: "Main Course",
+    time: "1 hr 20 min",
+    image: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=900&q=80",
+    alt: "A savory home-cooked Filipino-style pork dish",
+    ingredients: ["900 g pork shoulder, cut into chunks", "½ cup soy sauce", "½ cup cane vinegar", "1 cup water", "8 cloves garlic, crushed", "2 bay leaves and 1 tsp whole peppercorns"],
+    instructions: ["Marinate the pork with soy sauce and garlic for at least 30 minutes, if you have time.", "Add pork and marinade to a pot with water, bay leaves, and peppercorns. Bring to a boil, then simmer covered until tender, about 50 minutes.", "Pour in the vinegar and simmer uncovered for 10 minutes without stirring. Taste, adjust the sauce, and serve with hot rice."],
+    description: "Tender pork in a savory, tangy sauce of soy, cane vinegar, garlic, and peppercorns. Every family has its own version—this one is made for extra rice."
+  },
+  {
+    id: "sinigang",
+    title: "Pork sinigang with gabi & kangkong",
+    category: "Main Course",
+    time: "1 hr 30 min",
+    image: "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80",
+    alt: "A warm bowl of hearty soup with vegetables",
+    ingredients: ["700 g pork ribs", "8 cups water", "2 tomatoes, quartered", "1 onion, sliced", "2 gabi (taro), peeled and quartered", "Sinigang mix or tamarind to taste", "Daikon, eggplant, and kangkong"],
+    instructions: ["Simmer pork in water with onion and tomatoes until the meat is tender, skimming the broth as needed.", "Add gabi and daikon; cook until soft. Stir in tamarind or sinigang mix to your preferred level of asim.", "Add eggplant and cook until tender, then fold in kangkong just before turning off the heat. Serve piping hot with rice."],
+    description: "Asim, sarap, and a little rainy-day magic. Pork ribs simmer with gabi, tomatoes, and greens in a bright tamarind broth that begs for rice."
+  },
+  {
+    id: "bulalo",
+    title: "Slow-simmered batangas bulalo",
+    category: "Main Course",
+    time: "3 hr",
+    image: "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80",
+    alt: "A bowl of slow-cooked soup for a comforting meal",
+    ingredients: ["1.2 kg beef shank with marrow bones", "10 cups water", "1 onion, quartered", "1 tbsp whole peppercorns", "2 corn cobs, cut into pieces", "1 small cabbage and a handful of pechay", "Fish sauce to taste"],
+    instructions: ["Cover the beef shanks with water in a large pot. Bring to a boil and skim off the foam for a clear broth.", "Add onion and peppercorns. Cover and gently simmer for 2½ to 3 hours, until the beef is tender and the marrow is soft.", "Add corn and cook for 10 minutes. Season with fish sauce, add cabbage and pechay, and cook until just wilted."],
+    description: "A Batangas classic: beef shanks and marrow slow-cooked until the broth turns rich and comforting. Add sweet corn and leafy greens, then gather everyone around."
+  },
+  {
+    id: "lumpia",
+    title: "Crispy pork & vegetable lumpia",
+    category: "Appetizer",
+    time: "50 min",
+    image: "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=900&q=80",
+    alt: "A colorful spread of fresh food ready to share",
+    ingredients: ["300 g ground pork", "1 carrot, finely grated", "1 cup finely shredded cabbage", "2 spring onions, chopped", "1 tbsp soy sauce", "Lumpia wrappers and oil for frying", "Sweet chili sauce for serving"],
+    instructions: ["Mix pork, carrot, cabbage, spring onion, and soy sauce in a bowl.", "Place a spoonful of filling near the edge of each wrapper. Fold in the sides, roll tightly, and seal the edge with water.", "Fry in batches over medium heat until golden and cooked through. Drain well and serve crisp with dipping sauce."],
+    description: "Golden, crunchy rolls filled with savory pork and vegetables. The first thing to disappear from the merienda table—especially with a sweet-and-sour dip."
+  },
+  {
+    id: "halo-halo",
+    title: "Merienda-ready halo-halo",
+    category: "Dessert",
+    time: "15 min",
+    image: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=900&q=80",
+    alt: "A colorful cold dessert topped with scoops of ice cream",
+    ingredients: ["½ cup crushed ice per glass", "2 tbsp sweetened red beans", "2 tbsp nata de coco and kaong", "2 tbsp ube halaya", "Evaporated milk", "Ube ice cream and leche flan"],
+    instructions: ["Layer beans, nata de coco, kaong, and ube halaya in tall glasses.", "Pack crushed ice generously over the toppings and pour evaporated milk over the top.", "Finish with ube ice cream and a piece of leche flan. Mix everything together before digging in."],
+    description: "A joyful mix of shaved ice, sweet beans, chewy nata de coco, ube, and creamy milk. Top it high with leche flan and ice cream, then halo—mix—it all up."
+  },
+  {
+    id: "bibingka",
+    title: "Golden bibingka with salted egg",
+    category: "Dessert",
+    time: "45 min",
+    image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=80",
+    alt: "A golden baked treat ready to share",
+    ingredients: ["1 cup rice flour", "½ cup all-purpose flour", "½ cup sugar", "2 tsp baking powder", "1 cup coconut milk", "2 eggs", "Salted egg slices and grated coconut"],
+    instructions: ["Whisk the rice flour, all-purpose flour, sugar, and baking powder together. Beat in coconut milk and eggs until smooth.", "Pour into a lined, greased cake pan and arrange salted egg slices on top.", "Bake at 190°C for 25–30 minutes until golden and set. Brush with butter and finish with grated coconut."],
+    description: "Soft, gently sweet rice cake with coconut fragrance, buttery edges, and salty slices of itlog na maalat. A comforting merienda any time of year."
+  }
+];
+
+const postList = document.getElementById("postList");
+const searchInput = document.getElementById("searchInput");
+const resultsNote = document.getElementById("resultsNote");
+const emptyState = document.getElementById("emptyState");
+const dialog = document.getElementById("recipeDialog");
+const dialogContent = document.getElementById("dialogContent");
+let activeCategory = "All";
+let searchTerm = "";
+
+function renderRecipes() {
+  const filtered = recipes.filter((recipe) => {
+    const matchesCategory = activeCategory === "All" || recipe.category === activeCategory;
+    const haystack = `${recipe.title} ${recipe.category} ${recipe.description} ${recipe.ingredients.join(" ")}`.toLowerCase();
+    return matchesCategory && haystack.includes(searchTerm.trim().toLowerCase());
+  });
+
+  postList.innerHTML = filtered.map((recipe, index) => `
+    <article class="post-row" style="animation-delay:${Math.min(index * 45, 180)}ms">
+      <button class="post-image-button" type="button" data-recipe="${recipe.id}" aria-label="Read ${recipe.title}"><img src="${recipe.image}" alt="${recipe.alt}" loading="lazy" /></button>
+      <div class="post-copy">
+        <span class="post-category">${recipe.category}</span>
+        <button class="post-title" type="button" data-recipe="${recipe.id}">${recipe.title}</button>
+        <p class="post-description">${recipe.description}</p>
+        <div class="post-meta"><span>${recipe.time}</span><span class="meta-dot" aria-hidden="true">·</span><span>Made for sharing</span></div>
+      </div>
+      <button class="read-more" type="button" data-recipe="${recipe.id}">Read the recipe <span aria-hidden="true">→</span></button>
+    </article>`).join("");
+
+  emptyState.hidden = filtered.length !== 0;
+  const isFiltered = activeCategory !== "All" || searchTerm.trim() !== "";
+  resultsNote.textContent = isFiltered ? `${filtered.length} ${filtered.length === 1 ? "recipe" : "recipes"}${searchTerm.trim() ? ` matching “${searchTerm.trim()}”` : ""}${activeCategory !== "All" ? ` in ${activeCategory.toLowerCase()}` : ""}` : "";
+}
+
+function openRecipe(id) {
+  const recipe = recipes.find((item) => item.id === id);
+  if (!recipe) return;
+  dialogContent.innerHTML = `
+    <img class="dialog-image" src="${recipe.image}" alt="${recipe.alt}" />
+    <div class="dialog-body">
+      <span class="post-category">${recipe.category} <span aria-hidden="true">·</span> ${recipe.time}</span>
+      <h2 id="dialogTitle">${recipe.title}</h2>
+      <p>${recipe.description}</p>
+      <div class="dialog-columns">
+        <section><h3>Gather your ingredients</h3><ul>${recipe.ingredients.map((item) => `<li>${item}</li>`).join("")}</ul></section>
+        <section><h3>Make it with love</h3><ol>${recipe.instructions.map((item) => `<li>${item}</li>`).join("")}</ol></section>
+      </div>
+    </div>`;
+  dialog.showModal();
+}
+
+postList.addEventListener("click", (event) => {
+  const trigger = event.target.closest("[data-recipe]");
+  if (trigger) openRecipe(trigger.dataset.recipe);
+});
+
+document.getElementById("featuredReadMore").addEventListener("click", () => openRecipe("pork-adobo"));
+document.getElementById("dialogClose").addEventListener("click", () => dialog.close());
+dialog.addEventListener("click", (event) => { if (event.target === dialog) dialog.close(); });
+searchInput.addEventListener("input", () => { searchTerm = searchInput.value; renderRecipes(); });
+document.getElementById("searchForm").addEventListener("submit", (event) => event.preventDefault());
+document.getElementById("clearSearch").addEventListener("click", () => {
+  searchInput.value = "";
+  searchTerm = "";
+  activeCategory = "All";
+  document.querySelectorAll(".category-link").forEach((button) => button.classList.toggle("active", button.dataset.category === "All"));
+  renderRecipes();
+});
+
+document.getElementById("categoryNav").addEventListener("click", (event) => {
+  const button = event.target.closest("[data-category]");
+  if (!button) return;
+  activeCategory = button.dataset.category;
+  document.querySelectorAll(".category-link").forEach((item) => item.classList.toggle("active", item === button));
+  renderRecipes();
+  document.getElementById("recipes").scrollIntoView({ behavior: "smooth", block: "start" });
+});
+
+const menuToggle = document.getElementById("menuToggle");
+const sidebar = document.getElementById("sidebar");
+function setMenuOpen(isOpen) {
+  document.body.classList.toggle("menu-open", isOpen);
+  menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
+  sidebar.setAttribute("aria-hidden", String(!isOpen));
+  if (isOpen) document.getElementById("closeSidebar").focus();
+  else menuToggle.focus();
+}
+menuToggle.addEventListener("click", () => setMenuOpen(true));
+document.getElementById("closeSidebar").addEventListener("click", () => setMenuOpen(false));
+document.getElementById("sidebarBackdrop").addEventListener("click", () => setMenuOpen(false));
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && document.body.classList.contains("menu-open")) setMenuOpen(false);
+  if (event.key === "/" && !["INPUT", "TEXTAREA"].includes(document.activeElement.tagName) && !dialog.open) {
+    event.preventDefault();
+    searchInput.focus();
+  }
+});
+document.querySelectorAll(".side-link").forEach((link) => link.addEventListener("click", () => setMenuOpen(false)));
+
+renderRecipes();
